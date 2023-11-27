@@ -84,6 +84,25 @@
     embedderContainer.src = src;
   }
 </script>
+</body> 
+<body>
+    <div class="menu-button" onclick="toggleMenu()">☰</div>
+    <div class="menu-options" id="menu">
+        <a href="https://shimmering-frangollo-bb86a6.netlify.app/">Site</a>
+        <a href="https://www.instagram.com/071lkz/">Instagram</a>
+        <a href="https://wa.me/557192920032">WhatsApp</a>
+        <a href="https://github.com/Mrrobot071">GitHub</a>
+    </div>
 
+    <script>
+        function toggleMenu() {
+            var menu = document.getElementById("menu");
+            if (menu.style.display === "block") {
+                menu.style.display = "none";
+            } else {
+                menu.style.display = "block";
+            }
+        }
+    </script>
 </body>
 </html>
