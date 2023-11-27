@@ -4,6 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevLuc HD</title>
+
   <style>
     body {
       font-family: Arial, sans-serif;
@@ -18,32 +19,32 @@
       padding: 0.5em;
       text-align: center;
     }
-    
-@media (max-width: 768px) {
-  .media {
-    width: calc(50% - 20px);
-  }
-}
 
-@media (max-width: 480px) {
-  .media {
-    width: 100%;
-  }
-}
+    @media (max-width: 768px) {
+      .media {
+        width: calc(50% - 20px);
+      }
+    }
 
-  section {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
-  padding: 20px;
-}
+    @media (max-width: 480px) {
+      .media {
+        width: 100%;
+      }
+    }
 
-.media {
-  width: calc(20% - 20px);
-  margin: 10px;
-  box-sizing: border-box;
-  cursor: pointer;
-}
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      padding: 20px;
+    }
+
+    .media {
+      width: calc(20% - 20px);
+      margin: 10px;
+      box-sizing: border-box;
+      cursor: pointer;
+    }
 
     .media img {
       width: 100%;
@@ -60,6 +61,32 @@
       font-family: Hanuman, Ruda, sans-serif;
       font-size: 15px;
       padding: 20px;
+      position: relative; /* Adicionado para posicionar os botões */
+    }
+
+    .container {
+      position: fixed;
+      top: 10px;
+      right: 5%;
+      z-index: 9996;
+    }
+
+    .reset-button {
+      width: 50px;
+      height: 50px;
+      background-color: #3498db;
+      border: none;
+      border-radius: 50%;
+      position: fixed;
+      top: 10px;
+      right: 10px;
+      z-index: 9999;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 24px;
+      color: white;
     }
   </style>
 </head>
@@ -155,34 +182,50 @@
     <img src="https://image.tmdb.org/t/p/w300/ewF3IlGscc7FjgGEPcQvZsAsgAW.jpg" alt="Winnie the pooh">
 </div>
 </section>
-  
+
+
+<div class="container">
+  <!-- Adicione um ícone de recarregar ao botão -->
+  <button class="reset-button" onclick="resetPage()">↻</button>
+</div>
+
+<div id="frameContainer" class="hidden frame-container">
+  <iframe id="EmbedderContainer" width="100%" height="100%" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+</div>
+
 <script>
-  function showFrame(src) {
-    const frameContainer = document.getElementById("frameContainer");
-    const embedderContainer = document.getElementById("EmbedderContainer");
+function resetPage() {
+  // Redirecionar para o site de filmes
+  window.location.href = 'https://mrrobot071.github.io/filmes/';
+}
 
-    frameContainer.classList.toggle("hidden");
-    embedderContainer.src = src;
+function showFrame(src) {
+  const frameContainer = document.getElementById("frameContainer");
+  const embedderContainer = document.getElementById("EmbedderContainer");
+  
+  // Adicione estilos ao iframe
+  embedderContainer.style.width = "740px";
+  embedderContainer.style.height = "360px";
+  embedderContainer.style.background = "#4b0082";
+  embedderContainer.style.color = "white";
+  embedderContainer.style.fontFamily = "Hanuman, Ruda, sans-serif";
+  embedderContainer.style.fontSize = "15px";
 
-    // Adicione estilos ao iframe
-    embedderContainer.style.width = "740px";
-    embedderContainer.style.height = "360px";
-    embedderContainer.style.background = "#4b0082";
-    embedderContainer.style.color = "white";
-    embedderContainer.style.fontFamily = "Hanuman, Ruda, sans-serif";
-    embedderContainer.style.fontSize = "15px";
+  // Centralize o frameContainer na tela
+  frameContainer.style.display = "flex";
+  frameContainer.style.alignItems = "center";
+  frameContainer.style.justifyContent = "center";
+  frameContainer.style.position = "fixed";
+  frameContainer.style.top = "0";
+  frameContainer.style.left = "0";
+  frameContainer.style.width = "100%";
+  frameContainer.style.height = "100%";
+  frameContainer.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
 
-    // Centralize o frameContainer na tela
-    frameContainer.style.display = "flex";
-    frameContainer.style.alignItems = "center";
-    frameContainer.style.justifyContent = "center";
-    frameContainer.style.position = "fixed";
-    frameContainer.style.top = "0";
-    frameContainer.style.left = "0";
-    frameContainer.style.width = "100%";
-    frameContainer.style.height = "100%";
-    frameContainer.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-  }
+  // Remover a classe 'hidden'
+  frameContainer.classList.remove("hidden");
+  embedderContainer.src = src;
+}
 </script>
 </body>
-</html> 
+</html>
