@@ -75,45 +75,20 @@
   <iframe id="EmbedderContainer" width="100%" height="100%" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 </div>
 
-<script>
- function showFrame(src) {
+<script>function showFrame(src) {
   const frameContainer = document.getElementById("frameContainer");
   const embedderContainer = document.getElementById("EmbedderContainer");
 
   frameContainer.classList.toggle("hidden");
   embedderContainer.src = src;
 
-  // Defina estilos centralizados para o frameContainer
-  const containerStyles = {
-    display: "flex",
-    justifyContent: "center",
-    alignItems: "center",
-    position: "fixed",
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    zIndex: "2",
-  };
-
-  // Aplicar estilos ao frameContainer
-  for (const style in containerStyles) {
-    frameContainer.style[style] = containerStyles[style];
-  }
-
-  // Defina estilos para o iframe dentro do frameContainer
-  const iframeStyles = {
-    width: "740px",
-    height: "360px",
-    background: "#4b0082",
-    color: "white",
-    fontFamily: "Hanuman, Ruda, sans-serif",
-    fontSize: "15px",
-  };
-
-  // Aplicar estilos ao iframe
-  for (const style in iframeStyles) {
-    embedderContainer.style[style] = iframeStyles[style];
-  }
+  // Adicione estilos ao iframe
+  embedderContainer.style.width = "740px";
+  embedderContainer.style.height = "360px";
+  embedderContainer.style.background = "#4b0082";
+  embedderContainer.style.color = "white";
+  embedderContainer.style.fontFamily = "Hanuman, Ruda, sans-serif";
+  embedderContainer.style.fontSize = "15px";
 }
 </script>
 
