@@ -5,36 +5,6 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevLuc HD</title>
   <style>
-    .menu-button {
-      position: fixed;
-      top: 20px;
-      right: 20px;
-      background-color: black;
-      padding: 10px;
-      border: 1px solid #000000;
-      border-radius: 50%;
-      cursor: pointer;
-      z-index: 9999;
-    }
-
-    .menu-options {
-      display: none;
-      position: fixed;
-      top: 70px;
-      right: 20px;
-      background-color: silver;
-      border: 1px solid #000000;
-      padding: 10px;
-      z-index: 9999;
-    }
-
-    .menu-options a {
-      display: none;
-      margin-bottom: 10px;
-      text-decoration: none;
-      z-index: 9999;
-    }
-
     body {
       font-family: Arial, sans-serif;
       background-color: #4B0082;
@@ -45,7 +15,7 @@
     header {
       background-color: #000000;
       color: white;
-      padding: 1em;
+      padding: 0.5em;
       text-align: center;
     }
 
@@ -70,7 +40,14 @@
     .hidden {
       display: none;
     }
- 
+
+    .frame-container {
+      background: #4b0082; /* Roxo meio escuro */
+      color: white;
+      font-family: Hanuman, Ruda, sans-serif;
+      font-size: 15px;
+      padding: 20px;
+    }
   </style>
 </head>
 <body>
@@ -95,22 +72,7 @@
 </section>
 
 <div id="frameContainer" class="hidden frame-container">
-  <iframe id="EmbedderContainer" style="
-  width: 740px;
-  height: 360px;
-  background: #4b0082; /* Roxo meio escuro */
-  color: white;
-  font-family: Hanuman, Ruda, sans-serif;
-  font-size: 15px;
-  padding: 20px;"></iframe>
-</div>
-
-<div class="menu-button" onclick="toggleMenu()">☰</div>
-<div class="menu-options" id="menu">
-  <a href="https://shimmering-frangollo-bb86a6.netlify.app/">Site</a>
-  <a href="https://www.instagram.com/071lkz/">Instagram</a>
-  <a href="https://wa.me/557192920032">WhatsApp</a>
-  <a href="https://github.com/Mrrobot071">GitHub</a>
+  <iframe id="EmbedderContainer" width="100%" height="100%" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
 </div>
 
 <script>
@@ -121,16 +83,7 @@
     frameContainer.classList.toggle("hidden");
     embedderContainer.src = src;
   }
-
-  function toggleMenu() {
-    var menu = document.getElementById("menu");
-    if (menu.style.display === "block") {
-      menu.style.display = "none";
-    } else {
-      menu.style.display = "block";
-    }
-  }
 </script>
 
 </body>
-</html>
+</html> 
