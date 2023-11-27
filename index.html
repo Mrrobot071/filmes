@@ -77,12 +77,20 @@
 
 <script>
   function showFrame(src) {
-    const frameContainer = document.getElementById("frameContainer");
-    const embedderContainer = document.getElementById("EmbedderContainer");
+  const frameContainer = document.getElementById("frameContainer");
+  const embedderContainer = document.getElementById("EmbedderContainer");
 
-    frameContainer.classList.toggle("hidden");
-    embedderContainer.src = src;
-  }
+  frameContainer.classList.toggle("hidden");
+  embedderContainer.src = src;
+
+  // Adicione estilos ao iframe
+  embedderContainer.style.width = "740px";
+  embedderContainer.style.height = "360px";
+  embedderContainer.style.background = "#4b0082";
+  embedderContainer.style.color = "white";
+  embedderContainer.style.fontFamily = "Hanuman, Ruda, sans-serif";
+  embedderContainer.style.fontSize = "15px";
+}
 </script>
 
 </body>
