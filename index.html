@@ -6,92 +6,100 @@
   <title>DevLuc HD</title>
 
   <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #4B0082;
-      margin: 0;
-      padding: 0;
-    }
+  body {
+    font-family: Arial, sans-serif;
+    background-color: #4B0082;
+    margin: 0;
+    padding: 0;
+  }
 
-    header {
-      background-color: #000000;
-      color: white;
-      padding: 0.5em;
-      text-align: center;
-    }
+  header {
+    background-color: #000000;
+    color: white;
+    padding: 0.5em;
+    text-align: center;
+  }
 
-    /* Estilos padrão para .media */
+  /* Estilos padrão para .media */
+  .media {
+    width: calc(20% - 20px);
+    margin: 10px;
+    box-sizing: border-box;
+    cursor: pointer;
+  }
+
+  @media (max-width: 1024px) {
+    /* Estilos para telas menores ou iguais a 1024px com quatro colunas */
+    .media {
+      width: calc(25% - 20px);
+    }
+  }
+
+  @media (max-width: 768px) {
+    /* Estilos para telas menores ou iguais a 768px com três colunas */
     .media {
       width: calc(33.33% - 20px);
-      margin: 10px;
-      box-sizing: border-box;
-      cursor: pointer;
     }
+  }
 
-    @media (min-width: 481px) and (max-width: 768px) {
-      /* Estilos para telas entre 481px e 768px com duas colunas */
-      .media {
-        width: calc(50% - 20px);
-      }
+  @media (max-width: 480px) {
+    /* Estilos para telas menores ou iguais a 480px com duas colunas */
+    .media {
+      width: calc(50% - 20px);
     }
+  }
 
-    @media (max-width: 480px) {
-      /* Estilos para telas menores ou iguais a 480px com três colunas */
-      .media {
-        width: calc(33.33% - 20px);
-      }
-    }
+  section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px;
+  }
 
-    section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-      padding: 20px;
-    }
+  .media img {
+    width: 100%;
+    height: auto;
+  }
 
-    .media img {
-      width: 100%;
-      height: auto;
-    }
+  .hidden {
+    display: none;
+  }
 
-    .hidden {
-      display: none;
-    }
+  .frame-container {
+    background: #4b0082; /* Roxo meio escuro */
+    color: white;
+    font-family: Hanuman, Ruda, sans-serif;
+    font-size: 15px;
+    padding: 20px;
+    position: relative; /* Adicionado para posicionar os botões */
+  }
 
-    .frame-container {
-      background: #4b0082; /* Roxo meio escuro */
-      color: white;
-      font-family: Hanuman, Ruda, sans-serif;
-      font-size: 15px;
-      padding: 20px;
-      position: relative; /* Adicionado para posicionar os botões */
-    }
+  .container {
+    position: fixed;
+    top: 10px;
+    right: 5%;
+    z-index: 9996;
+  }
 
-    .container {
-      position: fixed;
-      top: 10px;
-      right: 5%;
-      z-index: 9996;
-    }
+  .reset-button {
+    width: 40px;
+    height: 40px;
+    background-color: #3498db;
+    border: none;
+    border-radius: 50%;
+    position: fixed;
+    top: 5%;
+    right: 1.5%;
+    z-index: 9999;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 15px; /* Ajuste o tamanho do fonte conforme necessário */
+    color: white;
+  }
+</style>
 
-    .reset-button {
-      width: 50px;
-      height: 50px;
-      background-color: #3498db;
-      border: none;
-      border-radius: 50%;
-      position: fixed;
-      top: 10px;
-      right: 10px;
-      z-index: 9999;
-      cursor: pointer;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 24px;
-      color: white;
-    }
-  </style>
 </head>
 <body>
 
