@@ -70,16 +70,7 @@
     .hidden {
       display: none;
     }
-
-    .frame-container {
-      width: 740px;
-      height: 360px;
-      background: #4b0082; /* Roxo meio escuro */
-      color: white;
-      font-family: Hanuman, Ruda, sans-serif;
-      font-size: 15px;
-      padding: 20px;
-    }
+ 
   </style>
 </head>
 <body>
@@ -104,7 +95,14 @@
 </section>
 
 <div id="frameContainer" class="hidden frame-container">
-  <iframe id="EmbedderContainer" width="100%" height="100%" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+  <iframe id="EmbedderContainer" style="
+  width: 740px;
+  height: 360px;
+  background: #4b0082; /* Roxo meio escuro */
+  color: white;
+  font-family: Hanuman, Ruda, sans-serif;
+  font-size: 15px;
+  padding: 20px;"></iframe>
 </div>
 
 <div class="menu-button" onclick="toggleMenu()">☰</div>
