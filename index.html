@@ -18,19 +18,32 @@
       padding: 0.5em;
       text-align: center;
     }
+    
+@media (max-width: 768px) {
+  .media {
+    width: calc(50% - 20px);
+  }
+}
 
-    section {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      padding: 20px;
-    }
+@media (max-width: 480px) {
+  .media {
+    width: 100%;
+  }
+}
 
-    .media {
-      width: 30%;
-      margin: 10px;
-      cursor: pointer;
-    }
+  section {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 20px;
+}
+
+.media {
+  width: calc(20% - 20px);
+  margin: 10px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
 
     .media img {
       width: 100%;
@@ -69,6 +82,26 @@
   <div class="media" onclick="showFrame('https://embedder.net/e/movie?imdb=tt0371746')">
     <img src="img/h1.png" alt="Homem de Ferro">
   </div>
+
+  <div class="media" onclick="showFrame('https://embedder.net/e/tt0848228')">
+    <img src="https://image.tmdb.org/t/p/w300/u49fzmIJHkb1H4oGFTXtBGgaUS1.jpg" alt="Os Vingadores: The Avengers - 2012">
+</div>
+
+<div class="media" onclick="showFrame('https://embedder.net/e/tt2395427')">
+    <img src="https://image.tmdb.org/t/p/w300/vGIIl89vglo66yUfbuTxzNAs4y5.jpg" alt="Vingadores: Era de Ultron">
+</div>
+
+<div class="media" onclick="showFrame('https://embedder.net/e/tt4154796')">
+    <img src="https://image.tmdb.org/t/p/w300/q6725aR8Zs4IwGMXzZT8aC8lh41.jpg" alt="Vingadores: Ultimato - 2019">
+</div>
+
+<div class="media" onclick="showFrame('https://embedder.net/e/tt4154756')">
+    <img src="https://image.tmdb.org/t/p/w300/89QTZmn34iwXYeCpVxhC9UrT8sX.jpg" alt="Vingadores: Guerra Infinita - 2018">
+</div>
+
+<div class="media" onclick="showFrame('https://embedder.net/e/tt28477867')">
+    <img src="https://image.tmdb.org/t/p/w300/bhs2CZWqoee3JFMvSZd1Vg7HLfL.jpg" alt="LEGO Marvel Vingadores: Código Vermelho - 2023">
+</div>
 
   <div class="media" onclick="showFrame('https://embedder.net/e/tt4324274')">
     <img src="https://image.tmdb.org/t/p/w300/aGp9XDXmVM5lCKHWtgBC15S7XLr.jpg" alt="Batman vs Robin">
