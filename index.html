@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DevLuc HD</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #4B0082;
+      margin: 0;
+      padding: 0;
+    }
+
+    header {
+      background-color: #000000;
+      color: white;
+      padding: 1em;
+      text-align: center;
+    }
+
+    section {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-around;
+      padding: 20px;
+    }
+
+    .media {
+      width: 30%;
+      margin: 10px;
+      cursor: pointer;
+    }
+
+    .media img {
+      width: 100%;
+      height: auto;
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    .frame-container {
+      background: #4b0082; /* Roxo meio escuro */
+      color: white;
+      font-family: Hanuman, Ruda, sans-serif;
+      font-size: 15px;
+      padding: 20px;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Dev'Luc HD</h1>
+  <h2>Filmes e Séries</h2>
+</header>
+
+<section>
+  <div class="media" onclick="showFrame('https://embedder.net/e/movie?imdb=tt1300854')">
+    <img src="img/h3.png" alt="Homem de Ferro 3">
+  </div>
+
+  <div class="media" onclick="showFrame('https://embedder.net/e/movie?imdb=tt1228705')">
+    <img src="img/h2.png" alt="Homem de Ferro 2">
+  </div>
+
+  <div class="media" onclick="showFrame('https://embedder.net/e/movie?imdb=tt0371746')">
+    <img src="img/h1.png" alt="Homem de Ferro">
+  </div>
+</section>
+
+<div id="frameContainer" class="hidden frame-container">
+  <iframe id="EmbedderContainer" width="100%" height="100%" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+</div>
+
+<script>
+  function showFrame(src) {
+    const frameContainer = document.getElementById("frameContainer");
+    const embedderContainer = document.getElementById("EmbedderContainer");
+
+    frameContainer.classList.toggle("hidden");
+    embedderContainer.src = src;
+  }
+</script>
+
+</body>
+</html>
