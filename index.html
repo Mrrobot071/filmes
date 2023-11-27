@@ -156,21 +156,33 @@
 </div>
 </section>
   
-<script>function showFrame(src) {
-  const frameContainer = document.getElementById("frameContainer");
-  const embedderContainer = document.getElementById("EmbedderContainer");
+<script>
+  function showFrame(src) {
+    const frameContainer = document.getElementById("frameContainer");
+    const embedderContainer = document.getElementById("EmbedderContainer");
 
-  frameContainer.classList.toggle("hidden");
-  embedderContainer.src = src;
+    frameContainer.classList.toggle("hidden");
+    embedderContainer.src = src;
 
-  // Adicione estilos ao iframe
-  embedderContainer.style.width = "740px";
-  embedderContainer.style.height = "360px";
-  embedderContainer.style.background = "#4b0082";
-  embedderContainer.style.color = "white";
-  embedderContainer.style.fontFamily = "Hanuman, Ruda, sans-serif";
-  embedderContainer.style.fontSize = "15px";
-}
+    // Adicione estilos ao iframe
+    embedderContainer.style.width = "740px";
+    embedderContainer.style.height = "360px";
+    embedderContainer.style.background = "#4b0082";
+    embedderContainer.style.color = "white";
+    embedderContainer.style.fontFamily = "Hanuman, Ruda, sans-serif";
+    embedderContainer.style.fontSize = "15px";
+
+    // Centralize o frameContainer na tela
+    frameContainer.style.display = "flex";
+    frameContainer.style.alignItems = "center";
+    frameContainer.style.justifyContent = "center";
+    frameContainer.style.position = "fixed";
+    frameContainer.style.top = "0";
+    frameContainer.style.left = "0";
+    frameContainer.style.width = "100%";
+    frameContainer.style.height = "100%";
+    frameContainer.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+  }
 </script>
 </body>
 </html> 
