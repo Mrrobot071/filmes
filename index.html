@@ -5,6 +5,37 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>DevLuc HD</title>
   <style>
+        .menu-button {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background-color: black;
+            padding: 10px;
+            border: 1px solid #000000;
+            border-radius: 50%;
+            cursor: pointer;
+            z-index: 9999;
+        }
+
+        .menu-options {
+            display: none;
+            position: absolute;
+            top: 70px;
+            right: 20px;
+            background-color: silver;
+            border: 1px solid #000000;
+            padding: 10px;
+            z-index: 9999;
+        }
+
+        .menu-options a {
+            display: block;
+            margin-bottom: 10px;
+            text-decoration: none;
+            z-index: 9999;
+        }
+    </style>
+  <style>
     body {
       font-family: Arial, sans-serif;
       background-color: #4B0082;
