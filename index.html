@@ -3,6 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <title>DevLuc HD</title>
    <style>
     body {
@@ -126,7 +127,7 @@
 <div class="media" onclick="showFrame('https://embedder.net/e/movie?imdb=tt6349210')">
     <img src="https://image.tmdb.org/t/p/w300/wuuC2UVWsCSvAQNxvJiRJZLuYD3.jpg" alt="Heróis da Máscara Dourada">
 </div>
-  
+
   <div class="media" onclick="showFrame('https://embedder.net/e/movie?imdb=tt1300854')">
     <img src="img/h3.png" alt="Homem de Ferro 3">
   </div>
@@ -212,7 +213,7 @@
 </div>
 </section>
     <!-- Adicione um ícone de recarregar ao botão -->
-    <button class="reset-button" onclick="resetPage()">↻</button>
+<button class="reset-button" onclick="resetPage()"><i class="fas fa-home"></i></button>
   </div>
 
   <div id="frameContainer" class="hidden frame-container">
@@ -228,7 +229,7 @@
   function showFrame(src) {
   const frameContainer = document.getElementById("frameContainer");
   const embedderContainer = document.getElementById("EmbedderContainer");
- 
+
   // Adicione estilos ao iframe
   embedderContainer.style.width = "740px";
   embedderContainer.style.height = "360px";
@@ -255,7 +256,7 @@
   // Mostrar o botão extra ao clicar no vídeo
   extraCloseButton.style.display = "block";
 }
- 
+
 </script>
 <body>  
   <a href="https://api.whatsapp.com/send?l=pt&amp;phone=557192920032&amp;text=Olá! Gostaria de fazer um pedido de filme, série ou anime.">
