@@ -103,7 +103,6 @@
   </style>
 </head>
 <body>
-<button id="extraCloseButton" onclick="fecharFrame()">Fechar</button>
 
 <header>
   <h1>Dev'Luc HD</h1>
@@ -368,11 +367,6 @@
   // Remover a classe 'hidden'
   frameContainer.classList.remove("hidden");
   embedderContainer.src = src;
-
-  function fecharFrame() {
-    const frameContainer = document.getElementById("frameContainer");
-    frameContainer.classList.remove("show"); // Remove a classe 'show' para ocultar o contêiner
-}
 }
 
 </script>
