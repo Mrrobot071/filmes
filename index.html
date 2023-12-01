@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <link rel="icon" type="image/png" href="https://assets.kiwify.com.br/cdn-cgi/image/fit=scale-down,width=1000/fRt4sw0qezOyfuU/Ideias-20230427_110514_5f6025afd15b42deabd305a3f9352375.jpg">
-  <title>DevLuc HD</title>
+  <title>LUCFLIX</title>
+  
    <style>
     body {
       margin: 0;
@@ -18,7 +19,7 @@
     header {
       background-color: black;
       text-align: center;
-      padding: 10px 0;
+      padding: 15px 0;
     }
 
     .logo {
@@ -62,7 +63,7 @@
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      padding: 20px;
+      padding: 10px;
     }
 
     .media img {
@@ -79,7 +80,7 @@
       color: white;
       font-family: Hanuman, Ruda, sans-serif;
       font-size: 15px;
-      padding: 20px;
+      padding: 10px;
       position: relative; /* Adicionado para posicionar os botões */
     }
 
@@ -108,7 +109,8 @@
   color: white;
 }
 
-    }
+    } 
+
   </style>
 </head>
 <body>
@@ -116,9 +118,54 @@
 <header>
   <div class="logo">LucFlix</div>
   <h2>Filmes e Séries</h2>
-</header>
+      
+  </header>
 
-<section>
+<body>    
+<!-- Adicione os botões de categoria -->
+    <div class="category-buttons">
+      <button class="category-button" onclick="selectCategory('movies')">Filmes</button>
+      <button class="category-button" onclick="selectCategory('series')">Séries</button>
+      <button class="category-button" onclick="selectCategory('animations')">Animações</button>
+    </div>
+        <style>    /* Adicione estilos para os botões de categoria */
+    .category-buttons {
+      display: flex;
+      justify-content: center;
+      margin-top: 5px; /* Espaçamento do topo */
+    }
+
+    .category-button {
+      width: 96px;
+      height: 40px;
+      background-color: #001F3F; /* Azul marinho escuro */
+      border: none;
+      border-radius: 20px;
+      margin-right: 5px; /* Espaçamento entre os botões */
+      cursor: pointer;
+      font-size: 15px;
+      color: white;
+    } 
+ 
+#seriesSection,
+#animationsSection {
+  display: none;
+}</style>
+
+    </body>
+
+  <script>
+    // Adicione a função para selecionar a categoria
+    function selectCategory(category) {
+      // Lógica para selecionar a categoria e realizar a ação desejada
+      // Pode adicionar mais lógica conforme necessário
+      console.log(`Categoria selecionada: ${category}`);
+    }
+  </script>
+
+</header>
+<section id="moviesSection">
+  <!-- ... (conteúdo relacionado a filmes existente) ... --> 
   <div class="media" onclick="showFrame('https://embedder.net/e/tt10676048/')">
     <img src="https://image.tmdb.org/t/p/w300/sPmmgdmApfjX9x2mg02bo0aUOU9.jpg" alt="Título 1">
 </div>
@@ -343,6 +390,15 @@
     <img src="https://image.tmdb.org/t/p/w300/ewF3IlGscc7FjgGEPcQvZsAsgAW.jpg" alt="Winnie the pooh">
 </div>
 </section>
+ 
+<section id="seriesSection">
+  <!-- ... (conteúdo relacionado a séries) ... -->
+</section>
+
+<section id="animationsSection">
+  <!-- ... (conteúdo relacionado a animações) ... -->
+</section>
+
     <!-- Adicione um ícone de recarregar ao botão -->
 <button class="reset-button" onclick="resetPage()"><i class="fas fa-home"></i></button>
   </div>
@@ -385,6 +441,15 @@
   embedderContainer.src = src;
 }
 
+function selectCategory(categoria) {
+  // Ocultar todas as seções
+  document.getElementById("moviesSection").style.display = "none";
+  document.getElementById("seriesSection").style.display = "none";
+  document.getElementById("animationsSection").style.display = "none";
+
+  // Mostrar a seção selecionada
+  document.getElementById(`${categoria}Section`).style.display = "flex";
+}
 </script>
 <body>  
   <a href="https://api.whatsapp.com/send?l=pt&amp;phone=557192920032&amp;text=Olá! Gostaria de fazer um pedido de filme, série ou anime.">
