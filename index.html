@@ -142,8 +142,11 @@
       cursor: pointer;
       font-size: 15px;
       color: white;
-    }  
-
+    } 
+#seriesSection,
+#animationsSection {
+  display: none;
+}
 </style>
 </body>
   <script>
@@ -377,7 +380,7 @@
 <div class="media" onclick="showFrame('https://embedder.net/e/tt10980638')">
     <img src="https://image.tmdb.org/t/p/w300/1zMicGEwmGJTcxKT6h7mORVmORL.jpg" alt="Devil1s Peak">
 </div>
- 
+
 <div class="media" onclick="showFrame('https://embedder.net/e/tt19623240')">
     <img src="https://image.tmdb.org/t/p/w300/ewF3IlGscc7FjgGEPcQvZsAsgAW.jpg" alt="Winnie the pooh">
 </div>
@@ -385,10 +388,6 @@
  
 <section id="seriesSection">
   <!-- ... (conteúdo relacionado a séries) ... -->
-  <div class="media" onclick="showFrame('https://wmondplay.online/embed-2/? type=tvshows&imdb=tt2193021')">
-<img src="https://image.tmdb.org/t/p/w300/oaLXsduGoDOOftWziIOvyZzrR4T.jpg" alt="Arqueiro">
-</div>
-
 </section>
 
 <section id="animationsSection">
@@ -398,50 +397,55 @@
     <!-- Adicione um ícone de recarregar ao botão -->
 <button class="reset-button" onclick="resetPage()"><i class="fas fa-home"></i></button>
   </div>
-<div id="frameContainer" class="hidden frame-container">
-  <iframe id="EmbedderContainer" width="100%" height="100%" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-</div>
 
-<script>
+  <div id="frameContainer" class="hidden frame-container">
+    <iframe id="EmbedderContainer" width="100%" height="100%" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
+  </div>
+
+  <script>
+    function resetPage() {
+      // Redirecionar para o site de filmes
+      window.location.href = 'https://mrrobot071.github.io/filmes/';
+    }
+
   function showFrame(src) {
-    const frameContainer = document.getElementById("frameContainer");
-    const embedderContainer = document.getElementById("EmbedderContainer");
+  const frameContainer = document.getElementById("frameContainer");
+  const embedderContainer = document.getElementById("EmbedderContainer");
 
-    // Adicione estilos ao iframe
-    embedderContainer.style.width = "740px";
-    embedderContainer.style.height = "360px";
-    embedderContainer.style.background = "#4b0082";
-    embedderContainer.style.color = "white";
-    embedderContainer.style.fontFamily = "Hanuman, Ruda, sans-serif";
-    embedderContainer.style.fontSize = "15px";
+  // Adicione estilos ao iframe
+  embedderContainer.style.width = "740px";
+  embedderContainer.style.height = "360px";
+  embedderContainer.style.background = "#4b0082";
+  embedderContainer.style.color = "white";
+  embedderContainer.style.fontFamily = "Hanuman, Ruda, sans-serif";
+  embedderContainer.style.fontSize = "15px";
 
-    // Centralize o frameContainer na tela
-    frameContainer.style.display = "flex";
-    frameContainer.style.alignItems = "center";
-    frameContainer.style.justifyContent = "center";
-    frameContainer.style.position = "fixed";
-    frameContainer.style.top = "0";
-    frameContainer.style.left = "0";
-    frameContainer.style.width = "100%";
-    frameContainer.style.height = "100%";
-    frameContainer.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
+  // Centralize o frameContainer na tela
+  frameContainer.style.display = "flex";
+  frameContainer.style.alignItems = "center";
+  frameContainer.style.justifyContent = "center";
+  frameContainer.style.position = "fixed";
+  frameContainer.style.top = "0";
+  frameContainer.style.left = "0";
+  frameContainer.style.width = "100%";
+  frameContainer.style.height = "100%";
+  frameContainer.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
 
-    // Remover a classe 'hidden'
-    frameContainer.classList.remove("hidden");
-    embedderContainer.src = src;
-  }
+  // Remover a classe 'hidden'
+  frameContainer.classList.remove("hidden");
+  embedderContainer.src = src;
+}
 
-  function selectCategory(categoria) {
-    // Ocultar todas as seções
-    document.getElementById("moviesSection").style.display = "none";
-    document.getElementById("seriesSection").style.display = "none";
-    document.getElementById("animationsSection").style.display = "none";
+function selectCategory(categoria) {
+  // Ocultar todas as seções
+  document.getElementById("moviesSection").style.display = "none";
+  document.getElementById("seriesSection").style.display = "none";
+  document.getElementById("animationsSection").style.display = "none";
 
-    // Mostrar a seção selecionada
-    document.getElementById(`${categoria}Section`).style.display = "flex";
-  }
+  // Mostrar a seção selecionada
+  document.getElementById(`${categoria}Section`).style.display = "flex";
+}
 </script>
-
 <body>  
   <a href="https://api.whatsapp.com/send?l=pt&amp;phone=557192920032&amp;text=Olá! Gostaria de fazer um pedido de filme, série ou anime.">
     <img src="https://i.imgur.com/ryESuZ5.png" style="height:64px; position:fixed; bottom: 15px; right: 25px; z-index:0;" data-selector="img">
@@ -460,30 +464,3 @@
 </footer>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
