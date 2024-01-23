@@ -173,6 +173,11 @@
 <section id="moviesSection">
   <!-- ... (conteúdo relacionado a filmes existente) ... --> 
 
+<div class="media" onclick="showFrame('https://superflixapi.top/filme/tt6166392')">
+<img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQYLUZgFplW6Htb0kgCE3W86lUHEyHt_H4TFg&usqp=CAU" alt="wonka>
+</div>
+
+
 <div class="media" onclick="showFrame('https://superflixapi.top/filme/tt23289160')">
 <img src="https://upload.wikimedia.org/wikipedia/pt/e/e0/Godzilla_Minus_One_Poster.jpeg" alt="godzilla minus one">
 </div>
@@ -7079,118 +7084,4 @@
 <div class="media" onclick="showFrame('https://superflixapi.top/filme/tt21339834')" > <img src="https://wallpapercave.com/mwp/wp4371959.jpg" alt=""></div>
 <div class="media" onclick="showFrame('https://superflixapi.top/filme/tt12914174')" > <img src="https://wallpapercave.com/mwp/wp4371959.jpg" alt=""></div>
 <div class="media" onclick="showFrame('https://superflixapi.top/filme/tt21990918')" > <img src="https://wallpapercave.com/mwp/wp4371959.jpg" alt=""></div>
-<div class="media" onclick="showFrame('https://superflixapi.top/filme/tt15426294')" > <img src="https://wallpapercave.com/mwp/wp4371959.jpg" alt=""></div>
-<div class="media" onclick="showFrame('https://superflixapi.top/filme/tt14456350')" > <img src="https://wallpapercave.com/mwp/wp4371959.jpg" alt=""></div>
-<div class="media" onclick="showFrame('https://superflixapi.top/filme/tt1179904')" > <img src="https://wallpapercave.com/mwp/wp4371959.jpg" alt=""></div>
-<div class="media" onclick="showFrame('https://superflixapi.top/filme/tt1778304')" > <img src="https://wallpapercave.com/mwp/wp4371959.jpg" alt=""></div>
-<div class="media" onclick="showFrame('https://superflixapi.top/filme/tt2109184')" > <img src="https://wallpapercave.com/mwp/wp4371959.jpg" alt=""></div>
-<div class="media" onclick="showFrame('https://superflixapi.top/filme/tt2473682')" > <img src="https://wallpapercave.com/mwp/wp4371959.jpg" alt=""></div>
-
-   
-</section>
-
-<button class="reset-button" onclick="resetPage()"><i class="fas fa-home"></i></button>
-  </div>
-
-  <div id="frameContainer" class="hidden frame-container">
-    <iframe id="EmbedderContainer" width="100%" height="100%" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-  </div>
-
-   
-<button class="reset-button" onclick="resetPage()"><i class="fas fa-home"></i></button>
-  </div>
-
-  <div id="frameContainer" class="hidden frame-container">
-    <iframe id="EmbedderContainer" width="100%" height="100%" allowfullscreen="allowfullscreen" frameborder="0"></iframe>
-  </div>
-
-  <script>
-    function resetPage() {
-      // Redirecionar para o site de filmes
-      window.location.href = 'https://mrrobot071.github.io/filmes/';
-    }
-
-  function showFrame(src) {
-  const frameContainer = document.getElementById("frameContainer");
-  const embedderContainer = document.getElementById("EmbedderContainer");
-
-  // Adicione estilos ao iframe
-  embedderContainer.style.width = "740px";
-  embedderContainer.style.height = "360px";
-  embedderContainer.style.background = "#4b0082";
-  embedderContainer.style.color = "white";
-  embedderContainer.style.fontFamily = "Hanuman, Ruda, sans-serif";
-  embedderContainer.style.fontSize = "15px";
-
-  // Centralize o frameContainer na tela
-  frameContainer.style.display = "flex";
-  frameContainer.style.alignItems = "center";
-  frameContainer.style.justifyContent = "center";
-  frameContainer.style.position = "fixed";
-  frameContainer.style.top = "0";
-  frameContainer.style.left = "0";
-  frameContainer.style.width = "100%";
-  frameContainer.style.height = "100%";
-  frameContainer.style.backgroundColor = "rgba(0, 0, 0, 0.8)";
-
-  // Remover a classe 'hidden'
-  frameContainer.classList.remove("hidden");
-  embedderContainer.src = src;
-}
-
-function selectCategory(categoria) {
-  // Ocultar todas as seções
-  document.getElementById("moviesSection").style.display = "none";
-  document.getElementById("seriesSection").style.display = "none";
-  document.getElementById("animationsSection").style.display = "none";
-
-  // Mostrar a seção selecionada
-  document.getElementById(`${categoria}Section`).style.display = "flex";
-}
-</script>  
-<style>
-  footer {
-    background-color: black;
-    color: white;
-    text-align: center;
-    padding: 10px; /* Ajuste conforme necessário */
-  }
-
-  footer p {
-    margin: 8px 0; /* Adiciona um pequeno espaçamento entre os parágrafos */
-  }
-
-  ul {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-  }
-
-  li {
-    display: inline-block;
-    margin-right: 10px;
-  }
-
-  a {
-    color: white;
-    background-color: black;
-    border-radius: 50%;
-    padding: 10px;
-    text-decoration: none;
-  }
-</style>
-
-<footer>
-  <p>Copyright © 2023</p>
-  <p>Desenvolvido por Lucas Nathan</p>
-  <ul>
-    <li><a href="https://wa.me/557192920032" target="_blank"><i class="fab fa-whatsapp"></i></a></li>
-    <li><a href="https://www.instagram.com/071lkz/" target="_blank"><i class="fab fa-instagram"></i></a></li>
-    <li><a href="https://www.facebook.com/lucas.coelho.7564129" target="_blank"><i class="fab fa-facebook"></i></a></li>
-    <li><a href="https://www.linkedin.com/in/lucas-nathan-760944229/" target="_blank"><i class="fab fa-linkedin"></i></a></li>
-  </ul>
-</footer> 
-</body> 
-</html>
-
-                                                                                       
+<div class="media" onclick="showFrame('https://superflixapi.top/filme/tt15426294')
